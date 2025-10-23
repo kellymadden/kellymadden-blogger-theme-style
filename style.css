@@ -1,0 +1,229 @@
+/* ========================================
+   KELLY MADDEN – MINIMAL MODERN HOMEPAGE
+   ======================================== */
+
+body {
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header, .Header {
+  text-align: center;
+}
+
+.custom-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Shared taupe box style */
+.custom-box, .placeholder-box, .contact-box {
+  background: #f4f4f2;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  padding: 60px 40px;
+  max-width: 900px;
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Header (Section 1) */
+.custom-box h1 {
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Menu */
+.custom-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 12px;
+}
+
+.custom-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.custom-menu a:hover {
+  color: #666;
+}
+
+.custom-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Section 2 & 3 placeholders */
+.placeholder-box h2 {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.placeholder-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.placeholder-box p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Contact form box (Section 4) */
+/* Contact form box (Section 4) */
+.contact-box {
+  background: #f4f4f2;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  padding: 60px 40px;
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-box h2 {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.contact-box textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-box button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: center;
+}
+
+.contact-box button:hover {
+  background-color: #555;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 700px) {
+  .contact-box {
+    padding: 40px 20px;
+    margin: 30px auto;
+  }
+
+  .contact-box h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .contact-box button {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}
+
+
+/* Footer (Section 5) */
+.custom-footer {
+  background: #fff;
+  color: #333;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 40px;
+}
+
+.custom-footer .social-links {
+  margin-top: 10px;
+}
+
+.custom-footer .social-links a {
+  margin: 0 8px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.custom-footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .custom-box,
+  .placeholder-box,
+  .contact-box {
+    padding: 40px 20px;
+  }
+  .custom-box h1 {
+    font-size: 26px;
+  }
+  .placeholder-box h2, .contact-box h2 {
+    font-size: 20px;
+  }
+  .custom-menu {
+    gap: 15px;
+  }
+}
