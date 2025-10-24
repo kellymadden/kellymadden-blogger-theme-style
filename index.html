@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelly Madden</title>
+
+  <!-- External CSS (update hash or version as needed) -->
+  <link href='https://cdn.jsdelivr.net/gh/kellymadden/kellymadden-blogger-theme-style@main/style.css?v=4' rel='stylesheet' type='text/css'/>
+
+  <style>
+  /* ====== TAUPE BLOGGER HOMEPAGE STYLES ====== */
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f5f3;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* ====== NAVIGATION ====== */
+  .main-nav {
+    text-align: center;
+    margin: 0 auto 40px;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 12px;
+  }
+
+  .main-nav li {
+    position: relative;
+  }
+
+  .main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 6px 0;
+  }
+
+  .main-nav a:hover {
+    color: #666;
+  }
+
+  .caret {
+    font-size: 0.7em;
+    margin-left: 6px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f4f2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 10px 0 0;
+    min-width: 180px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .has-dropdown.open .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .caret-right {
+    font-size: 0.8em;
+    margin-right: 4px;
+    color: #333;
+  }
+
+  .dropdown-menu li {
+    text-align: left;
+    padding: 0;
+  }
+
+  .dropdown-menu a {
+    color: #333;
+    display: block;
+    padding: 8px 15px;
+    transition: background-color 0.2s;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: rgba(0,0,0,0.05);
+  }
+
+  @media screen and (max-width: 600px) {
+    .main-nav ul {
+      flex-direction: row;
+      justify-content: center;
+      gap: 18px;
+    }
+  }
+
+  /* ====== SECTION 1: HEADER HERO ====== */
+  .custom-box {
+    background: linear-gradient(135deg, #a89f93, #d8d2c4);
+    color: #fff;
+    padding: 120px 30px;
+    text-align: center;
+  }
+
+  .custom-box h1 {
+    font-size: 6em;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin: 0 0 20px;
+  }
+
+  .custom-box p {
+    font-size: 1.4em;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Responsive font sizing */
+  @media screen and (max-width: 880px) {
+    .custom-box h1 { font-size: 3em !important; line-height: 1.05; }
+  }
+
+  @media screen and (max-width: 600px) {
+    .custom-box h1 { font-size: 4em !important; line-height: 1; }
+  }
+
+  /* ====== SECTION 2: CONTENT BOXES ====== */
+  .content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 60px 30px;
+  }
+
+  .content-box {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .content-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  }
+
+  /* ====== SECTION 3: GALLERY GRID ====== */
+  .gallery-section {
+    background-color: #f2f1ef;
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .gallery-item {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.03);
+  }
+
+  /* ====== SECTION 4: FOOTER ====== */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #d8d2c4;
+    color: #333;
+    font-size: 0.9em;
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+
+      <li class="has-dropdown">
+        <a href="/p/gallery.html">Gallery <span class="caret">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/p/paintings.html">Paintings</a></li>
+          <li><a href="/p/drawings.html">Drawings</a></li>
+          <li><a href="/p/photography.html">Photography</a></li>
+          <li class="submenu"><span class="caret-right">›</span><a href="/p/catalogue.html">Catalogue</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/p/store.html">Store</a></li>
+      <li><a href="/p/bio.html">Bio</a></li>
+      <li><a href="/p/catalogue.html">Catalogue</a></li>
+      <li><a href="/p/reference.html">Reference</a></li>
+    </ul>
+  </nav>
+
+  <!-- ====== SECTION 1: HEADER HERO ====== -->
+  <section class="custom-box">
+    <h1>KELLY MADDEN</h1>
+    <p>Exploring form, texture, and tone — a visual dialogue between material and memory.</p>
+  </section>
+
+  <!-- ====== SECTION 2: CONTENT BOXES ====== -->
+  <section class="content-section">
+    <div class="content-box">
+      <h3>Studio</h3>
+      <p>Behind the canvas — reflections on process, materials, and daily practice.</p>
+    </div>
+    <div class="content-box">
+      <h3>Exhibitions</h3>
+      <p>Current and past exhibitions highlighting ongoing collections.</p>
+    </div>
+    <div class="content-box">
+      <h3>Press</h3>
+      <p>Articles, interviews, and features that explore Kelly’s visual language.</p>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 3: GALLERY GRID ====== -->
+  <section class="gallery-section">
+    <h2>Selected Works</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Artwork 1" width="100%"></div>
+      <div class="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Artwork 2" width="100%"></div>
+      <div class="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Artwork 3" width="100%"></div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 4: FOOTER ====== -->
+  <footer>
+    <p>© 2025 Kelly Madden. All rights reserved.</p>
+  </footer>
+
+  <!-- ====== DROPDOWN SCRIPT ====== -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const dropdowns = document.querySelectorAll(".has-dropdown");
+
+    dropdowns.forEach(drop => {
+      const trigger = drop.querySelector("a");
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        drop.classList.toggle("open");
+
+        dropdowns.forEach(other => {
+          if (other !== drop) other.classList.remove("open");
+        });
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".has-dropdown")) {
+        dropdowns.forEach(drop => drop.classList.remove("open"));
+      }
+    });
+  });
+  </script>
+</body>
+</html>
