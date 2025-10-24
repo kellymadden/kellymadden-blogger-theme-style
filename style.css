@@ -81,7 +81,6 @@ p:last-child {
 
 
 /* ======= MAIN NAVIGATION ======= */
-/* ======= MAIN NAVIGATION ======= */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -116,7 +115,7 @@ p:last-child {
   font-weight: 500;
   padding: 8px 10px;
   transition: color 0.3s ease;
-  line-height: 1.5; /* keeps GALLERY aligned */
+  line-height: 1.5;
   display: inline-flex;
   align-items: center;
 }
@@ -129,12 +128,15 @@ p:last-child {
 /* Arrow icon */
 .arrow {
   margin-left: 5px;
-  transition: transform 0.3s ease;
   fill: #333;
+  transition: transform 0.4s ease, fill 0.3s ease;
+  transform-origin: center;
 }
 
+/* Animate rotation when open */
 .dropdown.open .arrow {
   transform: rotate(180deg);
+  fill: #666;
 }
 
 /* ======= DROPDOWN MENU ======= */
@@ -150,19 +152,19 @@ p:last-child {
   z-index: 1000;
   overflow: hidden;
 
-  /* hide initially */
+  /* Hide initially */
   max-height: 0;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
   transition:
-    max-height 0.4s ease,
-    opacity 0.4s ease,
-    visibility 0.4s ease,
-    transform 0.4s ease;
+    max-height 0.45s ease,
+    opacity 0.45s ease,
+    visibility 0.45s ease,
+    transform 0.45s ease;
 }
 
-/* Fade + Slide Down Animation */
+/* Fade + Slide Down */
 .dropdown.open .dropdown-menu {
   visibility: visible;
   max-height: 500px;
@@ -217,6 +219,7 @@ p:last-child {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   }
 }
+
 
 
 
