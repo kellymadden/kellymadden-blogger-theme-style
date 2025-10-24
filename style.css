@@ -39,6 +39,7 @@ header, .Header {
 .custom-box h1 {
   font-size: 85px;
   color: #fff;
+  letter-spacing: 1px;
   margin-bottom: 25px;
   font-weight: 800;
 }
