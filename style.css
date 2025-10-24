@@ -81,6 +81,7 @@ p:last-child {
 
 
 /* ======= MAIN NAVIGATION ======= */
+/* ======= MAIN NAVIGATION ======= */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -115,6 +116,9 @@ p:last-child {
   font-weight: 500;
   padding: 8px 10px;
   transition: color 0.3s ease;
+  line-height: 1.5; /* keeps GALLERY aligned */
+  display: inline-flex;
+  align-items: center;
 }
 
 .main-nav a:hover,
@@ -150,13 +154,20 @@ p:last-child {
   max-height: 0;
   opacity: 0;
   visibility: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+  transform: translateY(-8px);
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
 }
 
+/* Fade + Slide Down Animation */
 .dropdown.open .dropdown-menu {
   visibility: visible;
-  max-height: 500px; /* large enough to fit all links */
+  max-height: 500px;
   opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-menu li {
@@ -183,11 +194,30 @@ p:last-child {
   opacity: 0.9;
 }
 
+/* Right caret before Catalogue */
+.caret-right {
+  display: inline-block;
+  margin-right: 6px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
 /* ======= RESPONSIVE ======= */
 @media screen and (max-width: 768px) {
   .main-nav ul {
     flex-direction: row;
-    flex-wrap: wra
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    background: #f4f4f2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+}
+
 
 
 
