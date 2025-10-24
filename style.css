@@ -34,9 +34,9 @@ header, .Header {
   text-align: center;
 }
 
-p1 {
-    margin-top: 2em;
-}
+    p + p {
+      margin-top: 2.5em; /* or 10px, 20px */
+    }
 
 /* Header (Section 1) */ 
 
