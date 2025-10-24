@@ -80,89 +80,103 @@ p:last-child {
 }
 
 
-/* Dropdown menu styles */
+/* ======= MAIN NAVIGATION ======= */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 12px;
+}
+
 .main-nav ul {
   list-style: none;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
   padding: 0;
-  position: relative;
+  margin: 0;
 }
 
 .main-nav li {
   position: relative;
-  display: inline-block;
 }
 
 .main-nav a {
-  color: #333;
   text-decoration: none;
-  padding: 10px 16px;
-  display: block;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 10px;
+  transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
   color: #666;
 }
 
-/* Dropdown structure */
+/* ======= DROPDOWN MENU ======= */
 .dropdown-menu {
   display: none;
   position: absolute;
-  left: 0;
   top: 100%;
-  background: #fff;
+  left: 0;
+  background: #f4f4f2;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border-radius: 8px;
+  border-radius: 6px;
+  padding: 10px 0;
   min-width: 180px;
   z-index: 1000;
+  flex-direction: column;
 }
 
 .dropdown-menu li {
   display: block;
+  text-align: left;
 }
 
 .dropdown-menu a {
-  padding: 10px 14px;
+  display: block;
+  padding: 8px 15px;
   color: #333;
+  font-weight: 400;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f4f4f2;
+  background: rgba(0,0,0,0.05);
 }
 
-/* Hover effect for desktop */
-.dropdown:hover .dropdown-menu {
-  display: block;
+/* Hover activation */
+.dropdown:hover > .dropdown-menu {
+  display: flex;
 }
 
-/* Indented submenu (Catalogue) */
-.dropdown-menu .submenu a {
-  padding-left: 26px;
-  font-style: italic;
-  color: #666;
+/* Submenu (indented Catalogue) */
+.dropdown-menu .submenu {
+  margin-left: 15px;
+  opacity: 0.9;
 }
 
-/* Responsive tweak for mobile */
-@media screen and (max-width: 880px) {
-  .main-nav li {
-    display: block;
-    text-align: center;
+/* ======= RESPONSIVE ======= */
+@media screen and (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .dropdown-menu {
     position: static;
     box-shadow: none;
     background: transparent;
+    display: none;
   }
 
-  .dropdown-menu a {
-    padding: 8px 0;
-  }
-
-  .dropdown-menu .submenu a {
-    padding-left: 16px;
+  .dropdown:hover > .dropdown-menu {
+    display: block;
   }
 }
+
 
 
 
