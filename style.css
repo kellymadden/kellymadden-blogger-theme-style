@@ -103,7 +103,13 @@ p:last-child {
   position: relative;
 }
 
-.main-nav a {
+/* Links and Toggle Button */
+.main-nav a,
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -111,8 +117,20 @@ p:last-child {
   transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.dropdown-toggle:hover {
   color: #666;
+}
+
+/* Arrow icon */
+.arrow {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  fill: #333;
+}
+
+.dropdown.open .arrow {
+  transform: rotate(180deg);
 }
 
 /* ======= DROPDOWN MENU ======= */
@@ -130,6 +148,10 @@ p:last-child {
   flex-direction: column;
 }
 
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
+
 .dropdown-menu li {
   display: block;
   text-align: left;
@@ -144,11 +166,6 @@ p:last-child {
 
 .dropdown-menu a:hover {
   background: rgba(0,0,0,0.05);
-}
-
-/* Hover activation */
-.dropdown:hover > .dropdown-menu {
-  display: flex;
 }
 
 /* Submenu (indented Catalogue) */
@@ -169,13 +186,14 @@ p:last-child {
     position: static;
     box-shadow: none;
     background: transparent;
-    display: none;
+    padding: 0;
   }
 
-  .dropdown:hover > .dropdown-menu {
-    display: block;
+  .dropdown-menu a {
+    padding: 6px 0;
   }
 }
+
 
 
 
