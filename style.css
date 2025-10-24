@@ -40,20 +40,20 @@ header, .Header {
   font-size: 85px;
   color: #fff;
   margin-bottom: 25px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* Styles for screens up to 768px wide (tablets and mobiles) */
 @media screen and (max-width: 768px) {
   .custom-box h1 {
-    font-size: 4em;
+    font-size: 6em;
   }
 }
 
 /* Styles for screens up to 480px wide (smaller mobiles) */
 @media screen and (max-width: 480px) {
   .custom-box h1 {
-    font-size: 4.2em;
+    font-size: 6.2em;
   }
 }
 
