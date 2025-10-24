@@ -54,7 +54,7 @@ p:last-child {
   color: #fff;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  margin: 0;
+  margin: 0 0 0.6em 0; /* ← adds space below the title */
 }
 
 /* Tablets (≤ 880px) */
@@ -64,6 +64,7 @@ p:last-child {
     line-height: 1.05;
       color: #fff;
     letter-spacing: 0.01em;
+     margin-bottom: 0.5em; /* slightly less space on tablets */
   }
 }
 
@@ -74,6 +75,7 @@ p:last-child {
     line-height: 1;
       color: #fff;
     letter-spacing: 0em;
+     margin-bottom: 0.4em; /* tighter spacing on small screens */
   }
 }
 
