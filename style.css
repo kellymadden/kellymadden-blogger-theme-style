@@ -47,7 +47,7 @@ header, .Header {
     /* Tablet and mobile styles for .custom-box h1 */
     @media screen and (max-width: 768px) {
       .custom-box h1 {
-        font-size: 6em; !important; /* This will apply to h1 within .custom-box */
+        font-size: 9em; !important; /* This will apply to h1 within .custom-box */
         color: #fff;
         letter-spacing: 1px;
         margin-bottom: 25px;
@@ -55,17 +55,10 @@ header, .Header {
       }
     }
 
-/* Tablet and mobile styles for .custom-box h1 */
-@media screen and (max-width: 768px) {
-  .custom-box h1 {
-    font-size: 6em; !important;
-  }
-}
-
 /* Smaller mobile styles for .custom-box h1 */
 @media screen and (max-width: 480px) {
   .custom-box h1 {
-    font-size: 6.2em; !important;
+    font-size: 9.2em; !important;
   }
 }
 
