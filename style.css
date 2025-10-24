@@ -35,7 +35,8 @@ header, .Header {
 }
 
     p + p {
-      margin-top: 8rem; /* or 10px, 20px */
+      margin-top: 8rem;
+       line-height: 3.5;
     }
 
 /* Header (Section 1) */ 
