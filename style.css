@@ -34,7 +34,12 @@ header, .Header {
   text-align: center;
 }
 
-/* Header (Section 1) */
+p1 {
+   line-height: 1.5;
+}
+
+/* Header (Section 1) */ 
+
 /* Base styles for h1, for desktop and larger devices */
 .custom-box h1 {
   font-size: 85px;
@@ -61,8 +66,6 @@ header, .Header {
     font-size: 9.2em;
   }
 }
-
-
 
 
 /* Menu */
