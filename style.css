@@ -36,6 +36,7 @@ header, .Header {
 
 /* Header (Section 1) */
 /* Base styles for h1, for desktop and larger devices */
+
 .custom-box h1 {
   font-size: 85px;
   color: #fff;
@@ -44,19 +45,40 @@ header, .Header {
   font-weight: 800;
 }
 
-/* Styles for screens up to 768px wide (tablets and mobiles) */
+/* Tablet and mobile styles for .custom-box h1 */
 @media screen and (max-width: 768px) {
   .custom-box h1 {
     font-size: 6em;
   }
 }
 
-/* Styles for screens up to 480px wide (smaller mobiles) */
+/* Smaller mobile styles for .custom-box h1 */
 @media screen and (max-width: 480px) {
   .custom-box h1 {
     font-size: 6.2em;
   }
 }
+
+/* Mobile styles for all h1 and p elements */
+@media screen and (max-width: 768px) {
+  h1 { 
+    font-size: 2em; 
+  } 
+  p { 
+    font-size: 1.1em; 
+  }
+} 
+
+/* Further adjustments for smaller mobile screens */
+@media screen and (max-width: 480px) { 
+  h1 { 
+    font-size: 2.2em; 
+  } 
+  p { 
+    font-size: 1.2em; 
+  } 
+}
+
 
 
 /* Menu */
