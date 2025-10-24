@@ -34,7 +34,14 @@ header, .Header {
   text-align: center;
 }
 
-    @media screen and (max-width: 768px) {
+/* Header (Section 1) */
+.custom-box h1 {
+  font-size: 75px;
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 700;
+
+       @media screen and (max-width: 768px) {
       /* Adjust font size for screens up to 768px wide (common breakpoint for tablets/mobiles) */
       .your-selector {
         font-size: 1.2em; /* Example: increase font size by 20% */
@@ -60,13 +67,6 @@ header, .Header {
         font-size: 1.2em;
       }
     }
-
-/* Header (Section 1) */
-.custom-box h1 {
-  font-size: 75px;
-  color: #fff;
-  margin-bottom: 25px;
-  font-weight: 700;
 }
 
 /* Menu */
