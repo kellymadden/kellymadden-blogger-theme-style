@@ -172,6 +172,21 @@ p:last-child {
   transform: translateY(0);
 }
 
+.dropdown-menu {
+  /* Initial state: visible and opaque */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.dropdown-menu.fade-out {
+  /* Final state: transparent and hidden */
+  opacity: 0;
+  visibility: hidden;
+  /* Delay the visibility change until after the opacity transition */
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
 .dropdown-menu li {
   display: block;
   text-align: left;
