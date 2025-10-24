@@ -51,6 +51,7 @@ p:last-child {
 /* Desktop (default) */
 .custom-box h1 {
   font-size: 4em;
+  color: #fff;
   line-height: 1.1;
   letter-spacing: 0.02em;
   margin: 0;
@@ -59,8 +60,9 @@ p:last-child {
 /* Tablets (≤ 880px) */
 @media screen and (max-width: 880px) {
   .custom-box h1 {
-    font-size: 5em !important;
+    font-size: 4em !important;
     line-height: 1.05;
+      color: #fff;
     letter-spacing: 0.01em;
   }
 }
@@ -68,8 +70,9 @@ p:last-child {
 /* Mobile (≤ 600px) */
 @media screen and (max-width: 600px) {
   .custom-box h1 {
-    font-size: 6em !important;
+    font-size: 5em !important;
     line-height: 1;
+      color: #fff;
     letter-spacing: 0em;
   }
 }
