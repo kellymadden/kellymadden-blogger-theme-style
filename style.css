@@ -37,7 +37,7 @@ header, .Header {
 /* Header (Section 1) */
 .custom-box h1 {
   font-size: 36px;
-  color: #000;
+  color: #fff;
   margin-bottom: 25px;
   font-weight: 700;
 }
