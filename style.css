@@ -36,16 +36,16 @@ header, .Header {
 
 /* Header (Section 1) */
 /* Base styles for h1, for desktop and larger devices */
-
-
-.custom-box h1 
- @media screen and (max-width: 768px) {
-  font-size: 6em; !important; /* This will apply to h1 within .custom-box */
-  color: #fff;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
-  font-weight: 800;
-}
+    /* Tablet and mobile styles for .custom-box h1 */
+    @media screen and (max-width: 768px) {
+      .custom-box h1 {
+        font-size: 6em; !important; /* This will apply to h1 within .custom-box */
+        color: #fff;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+        font-weight: 800;
+      }
+    }
 
 /* Tablet and mobile styles for .custom-box h1 */
 @media screen and (max-width: 768px) {
