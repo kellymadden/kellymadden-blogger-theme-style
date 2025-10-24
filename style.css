@@ -48,14 +48,14 @@ header, .Header {
 /* Tablet and mobile styles for .custom-box h1 */
 @media screen and (max-width: 768px) {
   .custom-box h1 {
-    font-size: 6em;
+    font-size: 6em; !important;
   }
 }
 
 /* Smaller mobile styles for .custom-box h1 */
 @media screen and (max-width: 480px) {
   .custom-box h1 {
-    font-size: 6.2em;
+    font-size: 6.2em; !important;
   }
 }
 
