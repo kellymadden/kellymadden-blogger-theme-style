@@ -100,6 +100,10 @@ p:last-child {
   display: block;
 }
 
+.main-nav a:hover {
+  color: #666;
+}
+
 /* Dropdown structure */
 .dropdown-menu {
   display: none;
@@ -161,27 +165,7 @@ p:last-child {
 }
 
 
-/* Menu */
-.custom-menu {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  padding-bottom: 12px;
-}
 
-.custom-menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.custom-menu a:hover {
-  color: #666;
-}
 
 .custom-box p {
   font-size: 15px;
