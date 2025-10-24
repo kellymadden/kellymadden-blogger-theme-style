@@ -34,8 +34,9 @@ header, .Header {
   text-align: center;
 }
 
-    p + p {
-      margin-top: 8rem;
+    p {
+      margin-top: 4rem;
+      margin-bottom: 4rem; 
        line-height: 3.5;
     }
 
