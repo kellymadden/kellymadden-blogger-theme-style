@@ -373,6 +373,24 @@ p:last-child {
   text-decoration: underline;
 }
 
+/* Policy Links */
+
+.custom-footer .policy-links {
+  margin-top: 10px;
+}
+
+.custom-footer .policy-links a {
+  margin: 0 8px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.custom-footer .policy-links a:hover {
+  text-decoration: underline;
+}
+
+
 /* Responsive */
 @media screen and (max-width: 700px) {
   .custom-box,
