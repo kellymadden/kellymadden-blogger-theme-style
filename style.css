@@ -35,7 +35,7 @@ header, .Header {
 }
 
 p1 {
-   line-height: 1.5;
+    margin-top: 1em;
 }
 
 /* Header (Section 1) */ 
