@@ -5,7 +5,7 @@
 body {
   background: #ffffff;
   font-family: "Poppins", sans-serif;
-  color: blue;
+  color: #333;
   margin: 0;
   padding: 0;
 }
@@ -36,6 +36,7 @@ header, .Header {
 
 p {
   margin-bottom: 20px; /* Adjust as needed */
+   padding-bottom: 20px;
 }
 
 p:last-child {
