@@ -80,6 +80,85 @@ p:last-child {
 }
 
 
+/* Dropdown menu styles */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.main-nav li {
+  position: relative;
+  display: inline-block;
+}
+
+.main-nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 16px;
+  display: block;
+}
+
+/* Dropdown structure */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu a {
+  padding: 10px 14px;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f4f4f2;
+}
+
+/* Hover effect for desktop */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Indented submenu (Catalogue) */
+.dropdown-menu .submenu a {
+  padding-left: 26px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive tweak for mobile */
+@media screen and (max-width: 880px) {
+  .main-nav li {
+    display: block;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropdown-menu a {
+    padding: 8px 0;
+  }
+
+  .dropdown-menu .submenu a {
+    padding-left: 16px;
+  }
+}
 
 
 /* Menu */
