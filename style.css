@@ -219,6 +219,41 @@ p:last-child {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   }
 }
+/* Separate dropdown toggle button (arrow only) */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 8px 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+/* Keep arrow aligned next to link */
+.dropdown-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.dropdown-link:hover {
+  color: #666;
+}
+
+/* Keep dropdown menu behavior the same */
+.dropdown:hover .dropdown-menu,
+.dropdown.open .dropdown-menu {
+  visibility: visible;
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
