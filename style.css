@@ -47,38 +47,33 @@ p:last-child {
 }
 
 /* Header (Section 1) */ 
-
-/* Desktop (default) */
 .custom-box h1 {
   font-size: 6em;
   color: #fff;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  margin: 0 0 0.6em 0; /* ← adds space below the title */
+  margin: 0 0 0.6em 0;
 }
 
-/* Tablets (≤ 880px) */
 @media screen and (max-width: 880px) {
   .custom-box h1 {
     font-size: 3em !important;
     line-height: 1.05;
-      color: #fff;
+    color: #fff;
     letter-spacing: 0.01em;
-     margin-bottom: 0.5em; /* slightly less space on tablets */
+    margin-bottom: 0.5em;
   }
 }
 
-/* Mobile (≤ 600px) */
 @media screen and (max-width: 600px) {
   .custom-box h1 {
     font-size: 4em !important;
     line-height: 1;
-      color: #fff;
+    color: #fff;
     letter-spacing: 0em;
-     margin-bottom: 0.4em; /* tighter spacing on small screens */
+    margin-bottom: 0.4em;
   }
 }
-
 
 /* ======= MAIN NAVIGATION ======= */
 .main-nav {
@@ -165,7 +160,8 @@ p:last-child {
 }
 
 /* Fade + Slide Down */
-.dropdown.open .dropdown-menu {
+.dropdown.open .dropdown-menu,
+.dropdown-menu.show {
   visibility: visible;
   max-height: 500px;
   opacity: 1;
@@ -204,21 +200,6 @@ p:last-child {
   opacity: 0.7;
 }
 
-/* ======= RESPONSIVE ======= */
-@media screen and (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    background: #f4f4f2;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-}
 /* Separate dropdown toggle button (arrow only) */
 .dropdown-toggle {
   background: none;
@@ -246,7 +227,23 @@ p:last-child {
   color: #666;
 }
 
-/* Keep dropdown menu behavior the same */
+/* ======= RESPONSIVE ======= */
+@media screen and (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    background: #f4f4f2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+}
+
+/* Keep dropdown menu behavior consistent */
 .dropdown:hover .dropdown-menu,
 .dropdown.open .dropdown-menu {
   visibility: visible;
@@ -255,13 +252,7 @@ p:last-child {
   transform: translateY(0);
 }
 
-
-
-
-
-
-
-
+/* ================= CUSTOM BOX TEXT ================= */
 .custom-box p {
   font-size: 15px;
   line-height: 1.7;
@@ -291,7 +282,6 @@ p:last-child {
   margin: 0 auto;
 }
 
-/* Contact form box (Section 4) */
 /* Contact form box (Section 4) */
 .contact-box {
   background: #f4f4f2;
@@ -408,7 +398,6 @@ p:last-child {
 }
 
 /* Policy Links */
-
 .custom-footer .policy-links {
   margin-top: 10px;
 }
@@ -423,7 +412,6 @@ p:last-child {
 .custom-footer .policy-links a:hover {
   text-decoration: underline;
 }
-
 
 /* Responsive */
 @media screen and (max-width: 700px) {
@@ -441,4 +429,12 @@ p:last-child {
   .custom-menu {
     gap: 15px;
   }
+}
+
+/* ================= DROPDOWN FADE + HOVER SAFE ================= */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
