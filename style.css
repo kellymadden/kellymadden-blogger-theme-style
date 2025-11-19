@@ -1,81 +1,601 @@
-/* ========================================
-   KELLY MADDEN – MINIMAL MODERN HOMEPAGE
-   ======================================== */
-html, body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* =======================
+       KELLY MADDEN – MINIMAL MODERN HOMEPAGE
+       ======================= */
+       
+       
+    /* =======================      
+    > Colors
+    Taupe #f4f4f2
+    
+    Grey #a6a6a6
+    
+    Aqua #80d4ff
+    
+    Pink #FF69B4
+    
+    > Fonts
+     Open Sans
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    
+    Poppins
+       font-family: "Poppins", sans-serif;
+    
+    Michroma
+    .michroma-regular {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  Coquette 
+      font-family: 'CoquetteW00-Light', cursive;
+      
+      Imperial Script
+      
+      .imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body {
-  background: #ffffff;
-  font-family: "Poppins", sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
 }
+         <h2 class="large-heading">K M</h2>
+    
+    > Logo
+          <img src="https://kellymadden.github.io/kellymadden-blogger-theme-style/Images/KMLOGO.png" alt="KM Logo" style="max-width:20%;"/>
+}
+      ======================= */  
+       
+    html, body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      color: #333;
+      background: #ffffff;
+    }
 
-header, .Header {
-  text-align: center;
-}
+    header {
+      text-align: center;
+    }
 
 .custom-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 60px 20px;
+  padding: 20px 20px; /* ↓ decreased from 60px to 20px */
+  box-sizing: border-box;
 }
 
-/* Shared taupe box style */
-.custom-box, .placeholder-box, .contact-box {
+@import url(https://db.onlinewebfonts.com/c/6fcade7abbedc0b15b45d46f0b8eca84?family=Coquette+W00+Light);
+
+h3 {
+      font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+       font-size: 1.2em; 
+}
+    
+    h4 {
+     font-size: 1em; 
+      font-weight: 200;
+      color: #000;
+      letter-spacing: 2.5px;
+    }
+    
+    h5 {
+     font-size: .88em; 
+      font-weight: 200;
+      color: #a6a6a6;
+    }
+
+    /* Shared head box style */
+    .custom-box, .contact-box {
+      background: #f4f4f2;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border-radius: 10px;
+  margin: 30px auto;
+  padding: 40px 40px;
+      max-width: 900px;
+      width: 90%;
+
+      text-align: center;
+    }
+    
+    .top-head-box {
+      background: #f4f4f2;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      padding: 10px 40px;
+      max-width: 900px;
+      width: 90%;
+      margin: 1px auto;
+      text-align: center;
+    }    
+/* === Compact Header Override === */    
+    @media screen and (max-width: 700px) {
+  .top-head-box {
+    padding: 2px 2px;}
+}
+
+    p { padding-bottom: 20px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* Top head box large title */
+    .top-head-box h1 {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+      font-size: 8em;
+      color: #fff;  
+      line-height: 1;
+      letter-spacing: 0.15em;
+      margin: 0 0 0.1em 0;
+    }
+    
+.large-heading {
+        font-size: 1.2em; /* Or use px, rem, vw */
+        font-family: 'Michroma', Arial, sans-serif;
+        }
+
+    @media screen and (max-width: 880px) {
+      .top-head-box h1 { font-size: 5em !important; margin-bottom: 0.5em; }
+    }
+    @media screen and (max-width: 600px) {
+      .top-head-box h1 { font-size: 4.6em !important; margin-bottom: 0.4em; }
+    }
+
+  
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Optional: Prevents extra space below the image if it's an inline element */
+    margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* =======================
+       MAIN NAVIGATION
+======================= */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  font-size: 13px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 5px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li { position: relative; }
+
+.main-nav a,
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 2.5px;
+  color: #333;
+  font-weight: 400;
+  padding: 8px 10px;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.main-nav a:hover,
+.dropdown-toggle:hover { color: #666; }
+
+/* =======================
+       DROPDOWN MENU
+======================= */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
   background: #f4f4f2;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border-radius: 10px;
-  padding: 60px 40px;
-  max-width: 900px;
-  width: 90%;
-  margin: 30px auto;
-  text-align: center;
+  border-radius: 6px;
+  padding: 0;
+  min-width: 180px;
+  z-index: 1000;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition:
+    max-height 0.45s ease,
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    visibility 0.45s ease;
 }
 
-p {
-   padding-bottom: 20px;
+.dropdown.open .dropdown-menu {
+  visibility: visible;
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-p:last-child {
+.dropdown-menu li {
+  display: block;
+  text-align: left;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  background: #f4f4f2;
+  transition: background 0.3s, color 0.4s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* Caret for Catalogue only */
+.caret-right {
+  margin-right: 6px;
+  color: #333;
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+.submenu a:hover .caret-right {
+  transform: translateX(4px);
+}
+
+/* Subtle stagger fade-in for links */
+.dropdown-menu li a {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.dropdown.open .dropdown-menu li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown.open .dropdown-menu li:nth-child(1) a { transition-delay: 0.05s; }
+.dropdown.open .dropdown-menu li:nth-child(2) a { transition-delay: 0.15s; }
+.dropdown.open .dropdown-menu li:nth-child(3) a { transition-delay: 0.25s; }
+.dropdown.open .dropdown-menu li:nth-child(4) a { transition-delay: 0.35s; }
+
+/* =======================
+       RESPONSIVE NAV
+======================= */
+@media (max-width: 768px) {
+  .gallery-row {
+    margin-bottom: 10px;
+  }
+
+  /* Gallery dropdown vertical on mobile */
+  .dropdown-menu {
+    position: absolute;
+    background: #f4f4f2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    text-align: left;
+  }
+
+  .dropdown.open .dropdown-menu {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Secondary menu horizontal */
+  .secondary-row ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =======================
+       TEXT STYLES
+       
+    .placeholder-box h2, .contact-box h2 { font-size: 24px; margin-bottom: 20px; }
+    .placeholder-box img { max-width: 100%; height: auto; border-radius: 6px; margin-bottom: 20px; }
+======================= */
+    .custom-box p, .contact-box p { font-size: 15px; line-height: 1.7; max-width: 700px; margin: 0 auto; }
+
+    /* Contact form */
+    .contact-box { display: flex; flex-direction: column; align-items: center; }
+    .contact-box form { display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 480px; }
+    .contact-box input, .contact-box textarea {
+      width: 100%; padding: 12px 14px; border: 1px solid #ccc; border-radius: 6px;
+      font-size: 14px; font-family: "Poppins", sans-serif; box-sizing: border-box;
+    }
+    .contact-box textarea { min-height: 120px; resize: vertical; }
+    .contact-box button {
+      background-color: #333; color: #fff; border: none; padding: 12px 28px; font-size: 15px;
+      border-radius: 6px; cursor: pointer; transition: background 0.3s ease;
+    }
+    .contact-box button:hover { background-color: #555; }
+
+    /* Footer */
+    .custom-footer { background: #fff; color: #333; padding: 40px 20px; text-align: center; font-size: 14px; line-height: 1.8; }
+    .custom-footer a { color: #333; font-weight: 600; text-decoration: none; margin: 0 8px; }
+    .custom-footer a:hover { text-decoration: underline; }
+
+    @media screen and (max-width: 700px) {
+      .custom-box, .contact-box, .top-head-box { padding: 40px 20px; }
+      .top-head-box h1 { font-size: 36px; }
+       .contact-box h2 { font-size: 20px; }
+    }
+
+/* Placed below to control .top-head-box spacing */
+/* === Compact Header Override === */
+@media screen and (max-width: 700px) { .top-head-box { padding: 2px 2px;} }    
+    
+/* =======================
+       CONTACT FORM CHECKBOXES
+======================= */
+
+/* Parent container: controls vertical spacing between rows */
+.contact-box .checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Each row: checkbox + label */
+.contact-box .checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px; /* horizontal space between checkbox and its text */
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 24px; /* ⬅️ add vertical spacing between rows */
+}
+
+/* Make sure the last checkbox doesn’t add extra space below */
+.contact-box .checkbox-row:last-child {
   margin-bottom: 0;
 }
 
-/* Header (Section 1) */ 
-.custom-box h1 {
-  font-size: 6em;
+/* Checkbox sizing */
+.contact-box .checkbox-row input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+
+/* Label text styling */
+.contact-box .checkbox-row label {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+  text-align: left;
+}
+
+/* Responsive tweak: slightly more space on mobile */
+@media (max-width: 600px) {
+  .contact-box .checkbox-row {
+    margin-bottom: 32px; /*  vertical space between rows on mobile */
+  }
+}
+
+
+/* === Elegant Animated Checkbox === */
+.contact-box .checkbox-row input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #535346;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover effect – soft tint */
+.contact-box .checkbox-row input[type="checkbox"]:hover {
+  background-color: #f5f5f0;
+  border-color: #3f3f36;
+}
+
+/* Checked state – smooth fill */
+.contact-box .checkbox-row input[type="checkbox"]:checked {
+  background-color: #FF69B4;
+  border-color: #ccc;
+  transform: scale(1.08);
+  transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+}
+
+/* Centered white checkmark */
+.contact-box .checkbox-row input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;              /* slightly thicker */
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;  /* thicker lines */
+  transform: translate(-50%, -60%) rotate(45deg); /* centers the checkmark */
+  opacity: 0;
+  animation: fadeCheck 0.4s ease forwards;
+}
+
+/* Smooth fade + scale animation */
+@keyframes fadeCheck {
+  0% { opacity: 0; transform: translate(-50%, -60%) rotate(45deg) scale(0.8); }
+  100% { opacity: 1; transform: translate(-50%, -60%) rotate(45deg) scale(1); }
+}
+
+/* Reset scale when unchecked */
+.contact-box .checkbox-row input[type="checkbox"]:not(:checked) {
+  transform: scale(1);
+}
+
+/* =======================
+       HR LINE
+======================= */
+    .custom-hr {
+    border: none; /* Remove default 3D border */
+    border-top: 1px solid #ccc; /* Create a thin, solid line with a light gray color */
+    width: 50%; /* Set the width to a percentage for responsiveness, adjust as needed */
+    margin-bottom: 20px; /* Center the line horizontally */
+    margin-left: auto; /* Center the line horizontally */
+    margin-right: auto; /* Center the line horizontally */
+}
+
+
+/* =======================
+       VIDEO - MAIN
+======================= */
+
+
+/* === Full Responsive Video (No Black Bars) === */
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: 0 0 20px rgba(0, 20, 60, 0.6);
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: none;
+  opacity: 0.4; /* Start slightly visible instead of black */
+  transition: opacity 2.5s ease, transform 2.5s ease;
+  transform: scale(1.02);
+}
+
+.video-container video.fadein {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* =======================
+       SOCIAL MEDIA
+======================= */
+
+/* Social & QR section */
+.social-qr-section {
+    width: 90%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    padding: 10px 10px;
+    height: 35px;
+    border-radius: 20%;
+    background: #ffffff;
+    color: #b3b3b3;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  background: #808080;
+      text-decoration: none;
   color: #fff;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  margin: 0 0 0.6em 0;
 }
 
-@media screen and (max-width: 880px) {
-  .custom-box h1 {
-    font-size: 3em !important;
-    line-height: 1.05;
-    color: #fff;
-    letter-spacing: 0.01em;
-    margin-bottom: 0.5em;
-  }
+/* =======================
+       LETTER LOGO ICONS
+======================= */
+
+.letter-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
 }
 
-@media screen and (max-width: 600px) {
-  .custom-box h1 {
-    font-size: 4em !important;
-    line-height: 1;
-    color: #fff;
-    letter-spacing: 0em;
-    margin-bottom: 0.4em;
-  }
+.letter-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    padding: 5px 5px;
+    height: 35px;
+    border-radius: 20%;
+    background: #ffffff;
+    color: #000;
+    font-size: .88rem;
+    text-decoration: none;
+    transition: background 0.4s, color 0.4s;
 }
 
-/* ======= MAIN NAVIGATION ======= */
+.letter-icons a:hover {
+  background: #f2f2f2;
+  text-decoration: none;
+  color: #fff;
+}
+
+.qr-placeholder img {
+    margin: 20px auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+
+/* =======================
+   MAIN NAVIGATION
+======================= */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -94,11 +614,8 @@ p:last-child {
   margin: 0;
 }
 
-.main-nav li {
-  position: relative;
-}
+.main-nav li { position: relative; }
 
-/* Links and Toggle Button */
 .main-nav a,
 .dropdown-toggle {
   background: none;
@@ -107,34 +624,19 @@ p:last-child {
   cursor: pointer;
   text-decoration: none;
   color: #333;
-  font-weight: 500;
+  font-weight: 400;
   padding: 8px 10px;
-  transition: color 0.3s ease;
-  line-height: 1.5;
+  transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   display: inline-flex;
   align-items: center;
 }
 
 .main-nav a:hover,
-.dropdown-toggle:hover {
-  color: #666;
-}
+.dropdown-toggle:hover { color: #FF69B4; }
 
-/* Arrow icon */
-.arrow {
-  margin-left: 5px;
-  fill: #333;
-  transition: transform 0.4s ease, fill 0.3s ease;
-  transform-origin: center;
-}
-
-/* Animate rotation when open */
-.dropdown.open .arrow {
-  transform: rotate(180deg);
-  fill: #666;
-}
-
-/* ======= DROPDOWN MENU ======= */
+/* =======================
+   DROPDOWN MENU – Elegant Fade
+======================= */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -146,105 +648,17 @@ p:last-child {
   min-width: 180px;
   z-index: 1000;
   overflow: hidden;
-
-  /* Hide initially */
   max-height: 0;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
   transition:
-    max-height 0.45s ease,
-    opacity 0.45s ease,
-    visibility 0.45s ease,
-    transform 0.45s ease;
+    max-height 0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+    opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1),
+    transform 0.75s cubic-bezier(0.25, 0.1, 0.25, 1),
+    visibility 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* Fade + Slide Down */
-.dropdown.open .dropdown-menu,
-.dropdown-menu.show {
-  visibility: visible;
-  max-height: 500px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.dropdown-menu li {
-  display: block;
-  text-align: left;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 10px 15px;
-  color: #333;
-  font-weight: 400;
-  background: #f4f4f2;
-  transition: background 0.3s;
-}
-
-.dropdown-menu a:hover {
-  background: rgba(0,0,0,0.05);
-}
-
-/* Submenu (indented Catalogue) */
-.dropdown-menu .submenu {
-  margin-left: 15px;
-  opacity: 0.9;
-}
-
-/* Right caret before Catalogue */
-.caret-right {
-  display: inline-block;
-  margin-right: 6px;
-  font-weight: bold;
-  opacity: 0.7;
-}
-
-/* Separate dropdown toggle button (arrow only) */
-.dropdown-toggle {
-  background: none;
-  border: none;
-  padding: 8px 6px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-}
-
-/* Keep arrow aligned next to link */
-.dropdown-link {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 4px;
-  display: inline-flex;
-  align-items: center;
-  transition: color 0.3s ease;
-}
-
-.dropdown-link:hover {
-  color: #666;
-}
-
-/* ======= RESPONSIVE ======= */
-@media screen and (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    background: #f4f4f2;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-}
-
-/* Keep dropdown menu behavior consistent */
-.dropdown:hover .dropdown-menu,
 .dropdown.open .dropdown-menu {
   visibility: visible;
   max-height: 500px;
@@ -252,189 +666,773 @@ p:last-child {
   transform: translateY(0);
 }
 
-/* ================= CUSTOM BOX TEXT ================= */
-.custom-box p {
-  font-size: 15px;
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto;
+/* Submenu links */
+.dropdown-menu li {
+  display: block;
+  text-align: left;
 }
-
-/* Section 2 & 3 placeholders */
-.placeholder-box h2 {
-  font-size: 24px;
-  color: #000;
-  margin-bottom: 20px;
-}
-
-.placeholder-box img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-
-.placeholder-box p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Contact form box (Section 4) */
-.contact-box {
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
   background: #f4f4f2;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border-radius: 10px;
-  padding: 60px 40px;
-  max-width: 900px;
-  width: 90%;
-  margin: 40px auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  transition: background 0.3s, color 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.dropdown-menu a:hover {
+  background: rgba(0,0,0,0.05);
 }
 
-.contact-box h2 {
-  font-size: 24px;
-  color: #000;
-  margin-bottom: 20px;
-  font-weight: 600;
+/* Subtle stagger fade-in */
+.dropdown-menu li a {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.dropdown.open .dropdown-menu li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dropdown.open .dropdown-menu li:nth-child(1) a { transition-delay: 0.05s; }
+.dropdown.open .dropdown-menu li:nth-child(2) a { transition-delay: 0.15s; }
+.dropdown.open .dropdown-menu li:nth-child(3) a { transition-delay: 0.25s; }
+.dropdown.open .dropdown-menu li:nth-child(4) a { transition-delay: 0.35s; }
+
+/* Graceful fade-out */
+.dropdown.closing .dropdown-menu li a {
+  color: #aaa;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    color 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+    opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+    transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.contact-box form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+/* Caret only for Catalogue */
+.caret-right {
+  margin-right: 6px;
+  color: #333;
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+.submenu a:hover .caret-right {
+  transform: translateX(4px);
+}
+
+/* =======================
+   RESPONSIVE NAV
+======================= */
+@media (max-width: 768px) {
+  .gallery-row { margin-bottom: 10px; }
+  .dropdown-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    text-align: left;
+  }
+  .dropdown.open .dropdown-menu { transform: translateX(-50%) translateY(0); }
+  .secondary-row ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+/* Carousel Available */
+.carousel-available {
+    width: 95%;
+  aspect-ratio: 9 / 16;   /* more natural phone ratio */
+  max-width: 440px;
+    border-radius: 28px;
+    background: #fff; /* white background for smooth halo blending */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative; /* needed for halo positioning */
+    overflow: visible;  /* allow halos to extend outside */
+  margin: 0 auto 20px auto;  /* center horizontally + bottom spacing */
+}
+
+@media screen and (max-width: 700px) {
+  .carousel-available {
+    width: 95%;
+    max-width: 340px;
+    margin: 0 auto 18px auto;
+  }
+}
+
+}
+
+/* First halo layer (soft outer glow) */
+.carousel-available::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;  /* slightly larger than phone */
+    height: 120%;
+    transform: translate(-50%, -50%);
+    border-radius: 28px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 80%);
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Second halo layer (closer, slightly stronger) */
+.carousel-available::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 105%;  /* slightly smaller than first halo */
+    height: 105%;
+    transform: translate(-50%, -50%);
+    border-radius: 28px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0) 80%);
+    filter: blur(30px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Inner carousel frame */
+.carousel-frame {
+    width: 98%;
+    height: 98%;
+    border-radius: 24px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+  /* thin inner border + subtle inner glow */
+    box-shadow: inset 0 0 0 0.5% rgba(0,0,0,0.05),
+    inset 0 2% 5% rgba(0,0,0,0.03);
+    display: flex;
+      margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+      justify-content: center; /* centers inner content */
+    padding: 5%;
+    box-sizing: border-box;
+    z-index: 1; /* above halo layers */
+}
+
+}
+
+/* Thumbnail & text */
+.carousel-frame .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+/* Upward animated text for Shop and Exclusive Deals */
+.animated-text,
+.bottom-text {
+    font-size: 0.85rem;        /* adjust size as needed */
+    color: #333;
+    letter-spacing: 2px;
+    height: 18px;               /* space for rotation */
+    line-height: 18px;          /* vertical alignment */
+    overflow: hidden;           /* hides overflow text */
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 90%;
+    text-align: center;
+}
+
+.animated-text span,
+.bottom-text span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+      animation: fadeLoop 15s 1 alternate; /* Adjust duration as needed */
+}
+
+@keyframes fadeLoop {
+  0% {
+    opacity: 0; /* Start completely transparent */
+  }
+  25% {
+    opacity: 0.5; /* Start completely transparent */
+  }  
+  50% {
+    opacity: 1; /* Fully visible in the middle of the animation */
+  }
+  75% {
+    opacity: 0.5; /* Start completely transparent */
+  }  
+  100% {
+    opacity: 0; /* Return to completely transparent */
+  }
+}
+
+
+
+/* Button scale + color fade */
+/* Button scale + color fade (slower, gentle) */
+/* Halo breathing animation */
+/* Halo breathing animation */
+/* Main button color, number color, and scale synced animation */
+@keyframes buttonFullPulse {
+  0%   { background: #999999; color: #fff; transform: scale(1); }          /* medium gray, white text */
+  35%  { background: #737373; color: #FF69B4; transform: scale(1.1); }     /* dark gray, pink text, slight grow */
+  70%  { background: #a0a0a0; color: #000; transform: scale(1.08); }       /* lighter gray, black text, slight shrink */
+  100% { background: #dcdcdc; color: #000; transform: scale(1.05); }       /* final soft gray, black text, settle */
+}
+
+/* Halo synced with scale for natural pulse */
+@keyframes haloBreath {
+  0%   { transform: translate(-50%, -50%) scale(0.95); opacity: 0.25; filter: blur(18px); }
+  35%  { transform: translate(-50%, -50%) scale(1.1); opacity: 0.45; filter: blur(22px); }
+  70%  { transform: translate(-50%, -50%) scale(1.08); opacity: 0.4; filter: blur(24px); }
+  100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.3; filter: blur(20px); }
+}
+
+
+
+/* Staggered animation for multiple spans */
+.animated-text span:nth-child(1),
+.bottom-text span:nth-child(1) { animation-delay: 0s; }
+.animated-text span:nth-child(2),
+.bottom-text span:nth-child(2) { animation-delay: 2s; }
+
+/* keyframes for upward rotation */
+@keyframes rotateUp {
+    0%   { transform: translateY(100%); opacity: 0; }
+    10%  { transform: translateY(0%);   opacity: 1; }
+    40%  { transform: translateY(0%);   opacity: 1; }
+    50%  { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(-100%); opacity: 0; }
+}
+
+
+
+/* Carousel container */
+.carousel-frame .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 1px;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Carousel images */
+.carousel-frame .carousel-track img {
   width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
+  height: auto;
+  object-fit: cover;    /* fills more vertically */
+  border-radius: 8px;
 }
 
-.contact-box input,
-.contact-box textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #ccc;
+/* Carousel track */
+.carousel-frame .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
+/* Carousel numbered buttons — fixed 5 per row layout */
+.carousel-frame .carousel-nav {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr); /* exactly 5 per row */
+  justify-items: center;
+  gap: clamp(12px, 2.5vw, 22px); /* base responsive gap */
+  margin: 18px 0 0 0;
+  position: relative;
+  z-index: 10;
+  touch-action: manipulation;
+}
+
+.carousel-frame .carousel-nav button {
+  background: #f2f2f2;
+  border: none;
   border-radius: 6px;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  width: clamp(32px, 7vw, 36px);
+  height: clamp(28px, 6vw, 32px);
+  cursor: pointer;
+  font-size: clamp(0.65rem, 1.6vw, 0.8rem);
+  color: #333;
+  transition: 
+    background 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s ease;
+}
+
+/* Hover / tap glow */
+.carousel-frame .carousel-nav button:hover,
+.carousel-frame .carousel-nav button:focus-visible {
+  background: #e6e6e6;
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Active pulse button */
+/* Active pulse button with soft delayed halo */
+/* Active pulse button with soft, natural halo */
+/* Base carousel button style */
+.carousel-frame .carousel-nav button {
+  background: #b3b3b3;  /* initial medium gray */
+  color: #fff;          /* white numbers initially */
+  transform: scale(1);
+  transition: none;     /* animation handles smooth transitions */
+  position: relative;   /* needed for halo pseudo-element */
+  overflow: visible;
+}
+
+/* Halo pseudo-element for breathing glow */
+.carousel-frame .carousel-nav button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,105,180,0.18) 0%, rgba(255,255,255,0) 75%);
+  filter: blur(20px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Active button: triggers color, scale, and halo pulse */
+.carousel-frame .carousel-nav button.active {
+  animation: buttonFullPulse 2.2s ease-in-out forwards;
+}
+
+/* Smooth halo breathing animation synced with main pulse */
+.carousel-frame .carousel-nav button.active::before {
+  opacity: 1;
+  animation: haloBreath 2.2s ease-in-out forwards;
+}
+
+
+
+/* spacing between two rows */
+.carousel-frame .carousel-nav + .carousel-nav {
+  margin-top: clamp(12px, 4vw, 16px);
+}
+
+/* --- Mobile touch-friendly adjustments --- */
+@media (max-width: 480px) {
+  .carousel-frame .carousel-nav {
+    gap: 30px; /* extra finger spacing */
+  }
+  .carousel-frame .carousel-nav button {
+    width: 32px;
+    height: 32px;
+    font-size: 0.93rem;
+  }
+}
+
+
+.animated-text-phrase,
+.bottom-text {
+    font-size: 0.85rem;        /* adjust size as needed */
+    color: #333;
+    letter-spacing: 2px;
+    height: 18px;               /* space for rotation */
+    line-height: 18px;          /* vertical alignment */
+    overflow: hidden;           /* hides overflow text */
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 90%;
+    text-align: center;
+}
+
+.animated-text-phrase span,
+.bottom-text span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+      animation: fadeLoop 15s 1 alternate; /* Adjust duration as needed */
+}
+
+@keyframes fadeLoop {
+  0% {
+    opacity: 0; /* Start completely transparent */
+  }
+  25% {
+    opacity: 0.5; /* Start completely transparent */
+  }  
+  50% {
+    opacity: 1; /* Fully visible in the middle of the animation */
+  }
+  75% {
+    opacity: 0.5; /* Start completely transparent */
+  }  
+  100% {
+    opacity: 0; /* Return to completely transparent */
+  }
+}
+
+
+
+/* Available button */
+.carousel-frame .button-link {
+    width: 60%;
+    padding: 10px;
+    background: #fff3f3;
+    color: #000;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* Collection button */
+.phone-frame-c .button-link {
+    width: 60%;
+    padding: 10px;
+    background: #fff3f3;
+    color: #000;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* Contact button */
+.button-link-contact {
+    width: 80%;
+    padding: 10px;
+    background: #fff3f3;
+    color: #000;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+/* Bottom text */
+.carousel-frame .bottom-text {
+    font-size: 0.85rem;
+    color: #333;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+/* Carousel collection */
+.carousel-collection {
+    width: 90%;
+    max-width: 400px;
+    aspect-ratio: 350 / 600;
+     border-radius: 28px;
+    background: #fff; /* changed to white for smooth halo blending */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative; /* needed for halo positioning */
+    overflow: visible;  /* allow halos to extend outside */
+}
+
+/* First halo layer (soft outer glow) */
+.carousel-collection::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;  /* slightly larger than phone */
+    height: 120%;
+    transform: translate(-50%, -50%);
+    border-radius: 28px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0) 80%);
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Second halo layer (closer, slightly stronger) */
+.carousel-collection::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 105%;  /* slightly smaller than first halo */
+    height: 105%;
+    transform: translate(-50%, -50%);
+    border-radius: 28px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0) 80%);
+    filter: blur(30px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* Carousel inside collection */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 8px 0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.carousel-track .phone-logo {
+    flex: 0 0 auto;
+    width: 60px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Numbered collection links container */
+.numbered-collection-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    position: relative;
+  /* Smooth, soft top/bottom gradient fade */
+mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.25) 80%, rgba(0,0,0,0.25) 100%);
+-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.25) 80%, rgba(0,0,0,0.25) 100%);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+}
+
+/* Links */
+.numbered-collection-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+.numbered-collection-links a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* First numbered link darker */
+.numbered-collection-links a:first-child {
+    color: #000;
+    font-weight: 400;
+    background: (0, 0, 0, 0.05);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* vertical pink shaft that stops at #4 */
+.numbered-collection-links::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(25% * 2); /* adjust: 25% per item if you have 4 visible items */
+    background: rgba(255, 216, 216, 1);
+    z-index: 0;
+}
+
+/* arrowhead at the bottom of #4 */
+.numbered-collection-links::after {
+    content: '';
+    position: absolute;
+    top: calc(25% * 2); /* place at the end of shaft */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid rgba(255, 216, 216, 1);
+    z-index: 0;
+}
+
+
+/* Ensure links are above the vertical strip */
+.numbered-collection-links a {
+    position: relative;
+    z-index: 1;
+}
+
+/* Static text */
+.static-text {
+    margin-top: 10px; 
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.logo-crown-fluid {
+  width: 9vw;       /* scales with screen width */
+  max-width: 67px;  
+  min-width: 35px;  
+  height: auto;
+}
+
+/* === MaddenVideo: minimal static toolbar (white circles, black icons) === */
+
+/* wrapper keeps video + toolbar grouped and centered */
+.video-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 28px; /* space below video for toolbar */
   box-sizing: border-box;
 }
 
-.contact-box textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contact-box button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 12px 28px;
-  font-size: 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  align-self: center;
-}
-
-.contact-box button:hover {
-  background-color: #555;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 700px) {
-  .contact-box {
-    padding: 40px 20px;
-    margin: 30px auto;
-  }
-
-  .contact-box h2 {
-    font-size: 20px;
-    margin-bottom: 16px;
-  }
-
-  .contact-box input,
-  .contact-box textarea {
-    font-size: 13px;
-    padding: 10px 12px;
-  }
-
-  .contact-box button {
-    padding: 10px 22px;
-    font-size: 14px;
-  }
-}
-
-/* Footer (Section 5) */
-.custom-footer {
-  background: #fff;
-  color: #333;
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.8;
-  margin-top: 40px;
-}
-
-.custom-footer .social-links {
-  margin-top: 10px;
-}
-
-.custom-footer .social-links a {
-  margin: 0 8px;
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.custom-footer .social-links a:hover {
-  text-decoration: underline;
-}
-
-/* Policy Links */
-.custom-footer .policy-links {
-  margin-top: 10px;
-}
-
-.custom-footer .policy-links a {
-  margin: 0 8px;
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.custom-footer .policy-links a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media screen and (max-width: 700px) {
-  .custom-box,
-  .placeholder-box,
-  .contact-box {
-    padding: 40px 20px;
-  }
-  .custom-box h1 {
-    font-size: 26px;
-  }
-  .placeholder-box h2, .contact-box h2 {
-    font-size: 20px;
-  }
-  .custom-menu {
-    gap: 15px;
-  }
-}
-
-/* ================= DROPDOWN FADE + HOVER SAFE ================= */
-.dropdown-menu.show {
+/* ensure video matches your other video styling */
+.madden-video {
+  width: 100%;
+  height: auto;
   display: block;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  object-fit: cover;
+}
+
+/* toolbar centered below the video (P3) */
+.madden-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  align-items: center;
+  pointer-events: auto;
+  user-select: none;
+}
+
+/* small circular white buttons (32px) with black FA icons */
+.madden-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  -webkit-tap-highlight-color: transparent; /* mobile */
+}
+
+/* black icons inside */
+.madden-btn i {
+  color: #000;
+  font-size: 14px; /* scales well inside 32px button */
+  line-height: 1;
+  opacity: 0.5;
+}
+
+/* slightly larger play button icon for clarity */
+.madden-play i {
+  font-size: 15px;
+}
+
+/* focus style for keyboard users (visible but subtle) */
+.madden-btn:focus {
+  outline: 3px solid rgba(128, 208, 255, 0.22);
+  outline-offset: 2px;
+}
+
+/* disabled / aria-disabled state */
+.madden-btn[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* mobile spacing tweak */
+@media (max-width: 480px) {
+  .madden-toolbar { gap: 10px; margin-top: 8px; }
+  .madden-btn { width: 36px; height: 36px; } /* slightly larger for tap */
+  .madden-btn i { font-size: 15px; }
+}
+
+.carousel-section {
+  margin-top: 1px;      /* reduce top gap */
+  margin-bottom: 10px;   /* reduce bottom gap */
+  padding-top: 25px;     /* smaller inner spacing */
+  padding-bottom: 25px;
+}
+
+@media screen and (max-width: 700px) {
+  .carousel-section {
+    margin-top: 1px;
+    margin-bottom: 6px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background: #bfbfbf; /* light gray */
+  color: #ffffff;       /* white arrow */
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;           /* initially hidden */
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Shown after scrolling */
+#backToTop.show {
+  opacity: 0.5; /* your requested opacity */
+}
+
+/* Optional: hover fade */
+#backToTop:hover {
+  opacity: 0.8;
 }
